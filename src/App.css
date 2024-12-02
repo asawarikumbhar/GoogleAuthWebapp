@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+/* Center the login container */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f7fb; /* Light background color */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: linear-gradient(135deg, #ff6f61, #ff9a8b);
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover effect to the login container */
+.login-container:hover {
+  transform: scale(1.03);
+}
+
+h1 {
   color: white;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* Style for the input fields */
+.input-group {
+  margin-bottom: 15px; /* Decreased margin for a more compact form */
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-group input {
+  padding: 10px; /* Smaller padding for more compact input */
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 14px; /* Smaller font size */
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow to inputs */
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #ff6f61;
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.8); /* Focus shadow */
+}
+
+/* Style for the Submit button */
+button {
+  padding: 12px 20px; /* Smaller button padding */
+  background-color: #ff6f61;
+  color: white;
+  font-size: 14px; /* Smaller button font size */
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff9a8b;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the Google sign-in button */
+.google-signin-btn {
+  background-color: #4285F4;
+  color: white;
+  font-size: 14px; /* Smaller Google button font size */
+  padding: 12px 20px; /* Smaller padding */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.google-signin-btn:hover {
+  background-color: #357ae8;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Show an error message */
+p {
+  color: red;
+  font-size: 16px;
+}
+
+/* Success message for logged-in users */
+span {
+  color: #61ff61;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+span:hover {
+  color: #ff9a8b;
+  cursor: pointer;
+}
+
+/* Styling for the span divider */
+span {
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+/* Style for logged-in users */
+.logged-in {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  margin-top: 20px;
 }
